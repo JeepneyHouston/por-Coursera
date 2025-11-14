@@ -1,0 +1,134 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 0px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+figure {
+  color: #333;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 5%; /* default, overridden in tablet */
+  border-top-right-radius: 5%;
+}
+
+figcaption {
+	background-color: black;
+    color: yellow;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+	width:100%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid black;
+    width: 100%;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (min-width: 772px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two-column layout */
+    gap: 10px;
+  }
+
+  figure {
+    border-radius: 50%; /* circular container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  figure img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* circular image */
+    margin-bottom: 10px;
+    margin: 0 auto; /* centers the image inside the figure */
+    display: block;
+  }
+
+figure:last-of-type {
+    grid-column: span 2;
+	width:100%;
+	height:auto;
+	img:last-of-type {
+    grid-column: span 2;
+	  width:100%;
+  	height:150px;
+  }
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  figure {
+    border-radius: 0%; /* remove circular shape */
+  }
+  
+  figure img {
+  width: 100%;
+  height: 40vw;
+  display: block;
+  border-radius:0%;
+}
+
+  figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #222;
+    color: #ffeb3b; /* yellow-ish font */
+    border-color: #000;
+  }
+}
